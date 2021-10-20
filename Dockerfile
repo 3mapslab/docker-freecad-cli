@@ -1,5 +1,7 @@
+# Adaptation from the great work in https://github.com/amrit3701/docker-freecad-cli
 FROM ubuntu:18.04
-MAINTAINER Amritpal Singh <amrit3701@gmail.com>
+
+LABEL maintainer="Licínio Carvalho <https://github.com/LCNCC>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
