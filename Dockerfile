@@ -12,8 +12,13 @@ ENV PYTHON_BIN_VERSION python3.8
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
 ENV PYTHON_PIP_VERSION 18.0
 
-ENV FREECAD_VERSION master
+# # By branch
+# ENV FREECAD_VERSION master
 # ENV FREECAD_VERSION releases/FreeCAD-0-19
+
+# By tag
+ENV FREECAD_VERSION 0.19.2
+
 ENV FREECAD_REPO git://github.com/FreeCAD/FreeCAD.git
 
 # python3.8-distutils https://github.com/deadsnakes/issues/issues/82
