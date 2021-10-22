@@ -16,9 +16,6 @@ ENV PYTHON_PIP_VERSION 18.0
 # ENV FREECAD_VERSION master
 ENV FREECAD_VERSION releases/FreeCAD-0-19
 
-# By tag
-# ENV FREECAD_VERSION 0.19.2
-
 ENV FREECAD_REPO git://github.com/FreeCAD/FreeCAD.git
 
 # python3.8-distutils https://github.com/deadsnakes/issues/issues/82
@@ -132,10 +129,8 @@ RUN \
         /usr/local/lib/python${PYTHON_MINOR_VERSION}/dist-packages/PySide2 \
         /usr/local/lib/python${PYTHON_MINOR_VERSION}/dist-packages/PySide
 
-# # This file is generated when we compile FreeCAD with GUI but right now
-# # while importing Draft module, Draft module is look for Draft_rc.py file.
-# # Bug in Draft module.
-# COPY Draft_rc.py /usr/local/Mod/Draft/Draft_rc.py
+# Fixing issue with the exportIFC.py file
+COPY ArchRoof.py /usr/local/Mod/Arch/ArchRoof.py
 
 # Fixed import MeshPart module due to missing libnglib.so
 # https://bugs.launchpad.net/ubuntu/+source/freecad/+bug/1866914
