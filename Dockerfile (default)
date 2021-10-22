@@ -132,10 +132,10 @@ RUN \
         /usr/local/lib/python${PYTHON_MINOR_VERSION}/dist-packages/PySide2 \
         /usr/local/lib/python${PYTHON_MINOR_VERSION}/dist-packages/PySide
 
-# # This file is generated when we compile FreeCAD with GUI but right now
-# # while importing Draft module, Draft module is look for Draft_rc.py file.
-# # Bug in Draft module.
-# COPY Draft_rc.py /usr/local/Mod/Draft/Draft_rc.py
+# This file is generated when we compile FreeCAD with GUI but right now
+# while importing Draft module, Draft module is look for Draft_rc.py file.
+# Bug in Draft module.
+COPY Draft_rc.py /usr/local/Mod/Draft/Draft_rc.py
 
 # Fixed import MeshPart module due to missing libnglib.so
 # https://bugs.launchpad.net/ubuntu/+source/freecad/+bug/1866914
